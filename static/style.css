@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Borel', cursive;
+    background-color: tan;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+   flex: 1;
+   text-align: right; 
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+p{
+    color: whitesmoke;
+    font-size: large;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    background-color: slategray;
+    color: lime;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5;
+}
+.btn:hover{
+    background: darkslategray;
+}
+.header{
+    background: radial-gradient(grey, crimson);
+}
+.header row{
+    margin-top: 70px;
+}
+.title{
+    content: '';
+    background: slategray;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*-------------- media query for menu ---------------*/
+
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70%;
+        left: 0;
+        background: slategray;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        display: none;
+    }
+}
+/*-------------------account page------------------*/
+
+body .burner{
+    color: darkblue;
+    --color-primary-dark: darkgreen;
+    --color-secondary: black;
+    --color-error: red;
+    --color-success: limegreen;
+    border-radius: 4px;
+
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 18px;
+    background: url(./images/logo.png);
+    background-size: cover;
+    margin-bottom: 40px;
+    background: var(color);
+}
+.containers{
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: #fff;
+}
+.containers, .form__input, .form__button{
+    font: 500 1rem 'Handjet', sans-serif;
+    font-family: 'Handjet';
+}
+.form > *:first-child{
+    margin-top: 0;
+}
+.form > *:last-child{
+    margin-bottom: 0;
+}
+.form__title{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.form__message{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.form__message--success{
+    color: var(--color-success);
+}
+.form__message--error{
+    color: var(--color-error);
+}
+.form__input-group{
+    margin-bottom: 1rem;
+}
+
+.form__input{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #ddcddd;
+    outline: none;
+    background: rgb(42, 237, 208);
+    transition: background 0.2s, border-color 0.2s;
+}
+.form__input:focus{
+    border-color: var(--color-primary);
+    background: #fff;
+}
+.form__input--error{
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+.form__input-error-message{
+    margin-top: 0.5rem;
+    font-size: 0.5rem;
+    color: var(--color-error);
+}
+
+/*----------- media query for less than 600 screen size ---------*/
+
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding: 20px 0;
+    }
+    .single-product h1{
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .cart info p{
+        display: none;
+    }
+}
